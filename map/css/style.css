@@ -1,0 +1,92 @@
+ body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            font-family: 'Ubuntu', sans-serif
+        };
+.fas {
+    color: Tomato;
+    font-size: 20px;
+}
+
+.custom,.leaflet-popup {
+  width: 340px;
+}
+.custom, .leaflet-popup-content-wrapper {
+    background: #5B92E5;
+    color:black;
+    font-size:16px;
+    border-radius: 15px;
+    font-family: 'Ubuntu', sans-serif
+    }
+.custom, .leaflet-popup-content-wrapper h2 {
+   text-align: center;
+   background-image: url('../img/rush1.png');
+   background-repeat: round;
+    color: #FF0000;
+    font-size: 30px;
+font-family: 'Lobster', cursive;
+    }
+    .custom, .leaflet-popup-content-wrapper p {
+   background-color: #FFFFE0;
+    font-size: 16px;
+ border-radius: 5px;
+ border-style: double;
+ border-width: 4px
+    }
+  
+  .custom, .leaflet-popup-tip {
+    background: #5B92E5;
+    border: 5px;
+    }
+/*
+.custom, .leaflet-popup-content-wrapper {
+    background: red;
+    color:blue;
+    font-size:16px;
+    border-radius: 50px;
+    }
+
+.custom, .leaflet-popup-content-wrapper h2 {
+   text-align: center;
+    position: relative;
+    background: #0097a7;
+    color: #fff;
+    font-size: 15px;
+    }
+    .custom, .leaflet-popup-content-wrapper h2:before {
+
+content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 1rem solid #fff;
+    border-top: 1rem solid transparent; 
+    border-bottom: 1rem solid transparent; 
+    }
+
+  .custom, .leaflet-popup-content-wrapper h2:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 1rem solid #fff;
+    border-top: 1rem solid transparent; 
+    border-bottom: 1rem solid transparent; 
+  }  
+
+
+
+.custom, .leaflet-popup-tip {
+    background: black;
+    border: 5px;
+    box-shadow: none;
+    position: absolute;
+    }
+*/
+ 
