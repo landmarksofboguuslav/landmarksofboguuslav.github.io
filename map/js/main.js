@@ -291,6 +291,8 @@ iconLayersControl.addTo(map);
 
 L.control.layers("", overlays).addTo(map);
 
+L.control.scale().addTo(map);
+
 // define toolbar options
 var options = {
     position: 'topleft', // toolbar position, options are 'topleft', 'topright', 'bottomleft', 'bottomright'
