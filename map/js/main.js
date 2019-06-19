@@ -237,6 +237,7 @@ var baselayers = {
 	"ESRI Топографічна": Esri_WorldTopoMap
 };
 
+L.control.scale().addTo(map);
 
 // coordinates
 L.control.coordinates().addTo(map);
@@ -290,8 +291,6 @@ var iconLayersControl = new L.Control.IconLayers(
 iconLayersControl.addTo(map);
 
 L.control.layers("", overlays).addTo(map);
-
-L.control.scale().addTo(map);
 
 // define toolbar options
 var options = {
@@ -374,14 +373,14 @@ map.addControl(new Ruler({
         }], position: 'topright'
 });
 */
-//legend button
+//buttons
 var stateChangingButton = L.easyButton({
     states: [{
             stateName: 'zoom-to-forest',        // name the state
-            icon: '<span class="fas fa-atlas fa" style="font-size:42px; color: maroon"></span>',  // and define its properties
-            title:     'Легенда',      // like its title
+            icon: '<span class="fas fa-info " style="font-size:42px; color: dodgerblue"></span>',  // and define its properties
+            title:     'Про карту',      // like its title
             onClick:  function (mylink, windowname, specs) {
-window.open('legend.html',"","width="+600+",height="+350+",screenX=1200,screenY=400,scrollbars=no,menubar=no,toolbar=no");
+window.open('info.html',"","width="+450+",height="+350+",screenX=1200,screenY=400,scrollbars=no,menubar=no,toolbar=no");
 return false
 }
         }], position: 'topright'
@@ -394,11 +393,11 @@ stateChangingButton.button.style.width = '44px'
 
 var stateChangingButton2 = L.easyButton({
     states: [{
-            stateName: 'zoom-to-forest',        // name the state
-            icon:      '<span class="fas fa-file-alt" style="font-size:42px; color:olive"></span>',               // and define its properties
-            title:     'Таблиця',      // like its title
+            stateName: '',        // name the state
+            icon: '<span class="fas fa-map-marker-alt " style="font-size:42px; color: maroon"></span>',  // and define its properties
+            title:     'Легенда',      // like its title
             onClick:  function (mylink, windowname, specs) {
-window.open('table.html',"","width="+950+",height="+550+",screenX=1200,screenY=400,scrollbars=yes,menubar=no,toolbar=no");
+window.open('legend.html',"","width="+600+",height="+350+",screenX=1200,screenY=400,scrollbars=no,menubar=no,toolbar=no");
 return false
 }
         }], position: 'topright'
@@ -408,6 +407,24 @@ stateChangingButton2.addTo(map);
 
 stateChangingButton2.button.style.height = '44px'
 stateChangingButton2.button.style.width = '44px'
+
+var stateChangingButton3 = L.easyButton({
+    states: [{
+            stateName: 'zoom-to-forest',        // name the state
+            icon:      '<span class="fas fa-file-alt " style="font-size:42px; color:olive"></span>',               // and define its properties
+            title:     'Таблиця',      // like its title
+            onClick:  function (mylink, windowname, specs) {
+window.open('table.html',"","width="+950+",height="+550+",screenX=1200,screenY=400,scrollbars=yes,menubar=no,toolbar=no");
+return false
+}
+        }], position: 'topright'
+});
+
+stateChangingButton3.addTo(map);
+
+stateChangingButton3.button.style.height = '44px'
+stateChangingButton3.button.style.width = '44px'
+
 
 //var cramb = L.easyButton('fa-globe fa-3x', function (mylink, windowname, width, height) {
 //window.open('https://fonts.google.com/specimen/Ubuntu?selection.family=Ubuntu', windowname,"width="+700+",height="+700+",screenX=10,screenY=10,scrollbars=yes");
